@@ -45,9 +45,6 @@ public class User {
 
     private String picture;
 
-    @Column(columnDefinition = "TEXT", nullable = true)
-    private String fcmToken;
-
     @OneToMany(mappedBy = "seller", fetch = FetchType.EAGER)
     @JsonManagedReference
     public Set<Product> products;
